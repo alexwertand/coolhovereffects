@@ -152,3 +152,27 @@ a {
     transform: translateY(10px);
     opacity: 1;
 }
+
+/*----------------------------------*/
+
+.darkviolet {
+    background-color: darkviolet;
+}
+
+.darkviolet a {
+    height: 100%;
+    overflow: hidden;
+}
+
+.darkviolet a:after {
+    content: attr(data-hover);
+    position: absolute;
+    display: block;
+    left: 0;
+    transition: transform 0.5s, color 0.25s;
+}
+
+.darkviolet a:hover:after {
+    transform: translateY(-100%);
+    color: orangered;
+}
