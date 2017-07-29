@@ -384,3 +384,31 @@ a {
     color: rebeccapurple;
 }
 
+/*--------------------------------------*/
+.lightseagreen {
+    background-color: lightseagreen;
+}
+
+.lightseagreen a {
+    padding-top: 15px;
+    border-top: 3px solid #168781;
+    color: #168781;
+}
+
+.lightseagreen a:before {
+    content: attr(data-hover);
+    position: absolute;
+    left: 0;
+    top: 15px;
+    display: block;
+    width: 0;
+    overflow: hidden;
+    padding-bottom: 15px;
+    color: white;
+    border-bottom: 3px solid white;
+    transition: width 0.5s;
+}
+
+.lightseagreen a:hover:before {
+    width: 100%;
+}
