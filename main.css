@@ -489,3 +489,49 @@ a {
     opacity: 1;
     text-shadow: 15px 0 white, -15px 0 white;
 }
+
+/*----------------------------------------------------*/
+.steelblue {
+    background-color: steelblue;
+}
+
+.steelblue a {
+    padding: 10px 15px;
+}
+
+.steelblue a:before,
+.steelblue a:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 52px;
+    height: 2px;
+    background-color: #5b6281;
+    opacity: 0.5;
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+    transition: all 0.3s;
+}
+
+.steelblue a:before {
+    left: 0;
+}
+
+.steelblue a:hover:before,
+.steelblue a:hover:after {
+    top: calc(0% - 3px);
+    left: 50%;
+    height: 3px;
+    opacity: 1;
+    transform: rotate(0deg) translateX(-50%);
+    background-color: #ffffff;
+}
+
+.steelblue a:after {
+    right: calc(0% - 54px);
+}
+
+.steelblue a:hover:after {
+    top: 100%;
+}
