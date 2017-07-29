@@ -266,7 +266,7 @@ a {
 }
 
 .darkred a {
-    padding: 3% 7%;
+    padding: 15px 25px;
 }
 
 .darkred a:before {
@@ -296,5 +296,54 @@ a {
 
 .darkred a:hover:after {
     transform: none;
+    opacity: 1;
+}
+
+/*------------------------------------*/
+.deeppink {
+    background-color: deeppink;
+}
+
+.deeppink a {
+    padding: 25px 15px;
+    text-align: center;
+}
+
+.deeppink a:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transition: height 0.3s;
+}
+
+.deeppink a:hover:before {
+    height: 7px;
+}
+
+.deeppink a:after {
+    content: attr(data-hover);
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 100;
+    text-transform: capitalize;
+    color: aqua;
+    opacity: 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid white;
+    transition: opacity 0.75s, top 0.3s, border 0.5s;
+}
+
+.deeppink a:hover:after {
+    top: 75%;
     opacity: 1;
 }
