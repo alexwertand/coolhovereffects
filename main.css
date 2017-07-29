@@ -259,3 +259,42 @@ a {
     width: 120%;
     left: -10%;
 }
+
+/*-------------------------------------------*/
+.darkred {
+    background-color: darkred;
+}
+
+.darkred a {
+    padding: 3% 7%;
+}
+
+.darkred a:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: 3px solid red;
+}
+
+.darkred a:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: 3px solid white;
+    transform: translate(10px, -12px);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.5s;
+}
+
+.darkred a:hover:after {
+    transform: none;
+    opacity: 1;
+}
