@@ -331,7 +331,7 @@ a {
     display: block;
     width: 100%;
     left: 0;
-    top: 50%;
+    top: 30%;
     font-size: 15px;
     font-style: italic;
     font-weight: 100;
@@ -347,3 +347,40 @@ a {
     top: 75%;
     opacity: 1;
 }
+
+/*------------------------------------*/
+.indigo {
+    background-color: indigo;
+}
+
+.indigo li {
+    position: relative;
+    overflow: hidden;
+}
+
+.indigo a {
+    padding: 15px 25px;
+    background-color: rebeccapurple;
+    left: 0;
+    transition: left 0.3s;
+}
+
+.indigo a:hover {
+    left: 100%;
+}
+
+.indigo a:before {
+    content: attr(data-hover);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    display: block;
+    padding: 15px 25px;
+    transition: left 0.3s 0.3s;
+}
+
+.indigo a:hover:before {
+    background-color: white;
+    color: rebeccapurple;
+}
+
