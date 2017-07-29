@@ -412,3 +412,49 @@ a {
 .lightseagreen a:hover:before {
     width: 100%;
 }
+
+/*-----------------------------------*/
+.salmon {
+    background-color: salmon;
+}
+
+.salmon a {
+    z-index: 2;
+}
+
+.salmon a:before,
+.salmon a:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 50%;
+    transition: width 0.5s, height 0.5s, opacity 0.5s;
+}
+
+.salmon a:hover:before {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+    border: 2px solid orangered;
+}
+
+.salmon a:after {
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s;
+}
+
+.salmon a:hover:after {
+    width: 60px;
+    height: 60px;
+    opacity: 1;
+    border: 5px solid orangered;
+}
