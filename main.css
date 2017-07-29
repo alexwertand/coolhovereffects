@@ -458,3 +458,34 @@ a {
     opacity: 1;
     border: 5px solid orangered;
 }
+
+/*--------------------------------------------------*/
+.slategray {
+    background-color: slategray;
+}
+
+.slategray a {
+    transition: color 0.5s;
+}
+
+.slategray a:hover {
+    color: #0a1964;
+}
+
+.slategray a:before {
+    content: ".";
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2em;
+    color: white;
+    opacity: 0;
+    transition: text-shadow 0.5s, opacity 0.5s;
+}
+
+
+.slategray a:hover:before {
+    opacity: 1;
+    text-shadow: 15px 0 white, -15px 0 white;
+}
