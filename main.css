@@ -535,3 +535,21 @@ a {
 .steelblue a:hover:after {
     top: 100%;
 }
+/*-------------------------------------------*/
+.teal {
+    background-color: teal;
+}
+
+.teal a:before {
+    content: attr(data-hover);
+    position: absolute;
+    color: orangered;
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.teal a:hover:before {
+    transform: scaleX(0.9);
+    opacity: 0;
+}
