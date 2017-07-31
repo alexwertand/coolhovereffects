@@ -553,3 +553,39 @@ a {
     transform: scaleX(0.9);
     opacity: 0;
 }
+
+/*-------------------------------------------*/
+.tomato {
+    background-color: tomato;
+}
+
+.tomato a:before {
+    content: attr(data-hover);
+    position: absolute;
+    transform: rotate(30deg);
+    transform-origin: 100% 10%;
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.3s;
+}
+
+.tomato a:hover:before {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+/*-----------------------------------------------*/
+.turquoise {
+    background-color: turquoise;
+}
+
+.turquoise a:before {
+    content: attr(data-hover);
+    position: absolute;
+    opacity: 0;
+    transform: translate(20px, -15px) rotate(4deg) scale(1.2);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.turquoise a:hover:before {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+}
