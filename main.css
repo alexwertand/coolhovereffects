@@ -673,3 +673,43 @@ a {
     z-index: -1;
     transform: rotate(-45deg);
 }
+
+/*---------------------------------------------------*/
+.darkkhaki {
+    background-color: darkkhaki;
+}
+
+.darkkhaki li {
+    perspective: 800px;
+}
+
+.darkkhaki a {
+    padding: 15px;
+    background-color: sienna;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50% -100px;
+    transform: rotateY(0deg);
+    transition: transform 0.4s, background-color 0.4s;
+}
+
+.darkkhaki a:before {
+    content: attr(data-hover);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 99.5%;
+    width: calc(100% - 30px);
+    padding: 15px;
+    background-color: sienna;
+    transform: rotateY(90deg);
+    transform-origin: 0 50%;
+}
+
+.darkkhaki a:hover {
+    transform: rotateY(-90deg);
+    background-color: #551f05;
+}
+
+.darkkhaki a:hover:before {
+    transform: rotateY(90deg);
+}
